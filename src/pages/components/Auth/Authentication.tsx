@@ -118,6 +118,7 @@ const Authentication = (props: Props): JSX.Element => {
           />
           {errors.fullName && (
             <p className="text-sm ml-2 text-red-600" role="alert">
+              {/* @ts-ignore: Unreachable code error */}
               {errors.fullName.message}
             </p>
           )}
@@ -139,6 +140,7 @@ const Authentication = (props: Props): JSX.Element => {
       />
       {errors.email && (
         <p className="text-sm ml-2 text-red-600" role="alert">
+          {/* @ts-ignore: Unreachable code error */}
           {errors.email.message}
         </p>
       )}
@@ -164,6 +166,7 @@ const Authentication = (props: Props): JSX.Element => {
           />
           {errors.mobile && (
             <p className="text-sm ml-2 text-red-600" role="alert">
+              {/* @ts-ignore: Unreachable code error */}
               {errors.mobile.message}
             </p>
           )}
@@ -176,14 +179,16 @@ const Authentication = (props: Props): JSX.Element => {
               required: { value: true, message: 'Gender is required' },
             })}
           >
-               {Gender.map((item: any, index) => (
-                <option key={index} value={item}>
-                  {item}
-                </option>
-              ))}
+            {Gender.map((item: any, index) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))}
           </select>
           {errors.gender && (
             <p className="text-sm ml-2 text-red-600" role="alert">
+              {/* @ts-ignore: Unreachable code error */}
+
               {errors.gender.message}
             </p>
           )}
@@ -197,12 +202,16 @@ const Authentication = (props: Props): JSX.Element => {
           >
             {Category.map((item, index) => {
               return (
-                  <option key={index} value={item}>{item}</option>
+                <option key={index} value={item}>
+                  {item}
+                </option>
               )
             })}
           </select>
           {errors.category && (
             <p className="text-sm ml-2 text-red-600" role="alert">
+              {/* @ts-ignore: Unreachable code error */}
+
               {errors.category.message}
             </p>
           )}
@@ -218,6 +227,8 @@ const Authentication = (props: Props): JSX.Element => {
           />
           {errors.dob && (
             <p className="text-sm ml-2 text-red-600" role="alert">
+              {/* @ts-ignore: Unreachable code error */}
+
               {errors.dob.message}
             </p>
           )}
@@ -243,6 +254,8 @@ const Authentication = (props: Props): JSX.Element => {
       />
       {errors.password && (
         <p className="text-sm ml-2 text-red-600" role="alert">
+          {/* @ts-ignore: Unreachable code error */}
+
           {errors.password.message}
         </p>
       )}
@@ -271,6 +284,8 @@ const Authentication = (props: Props): JSX.Element => {
           />
           {errors.ConfirmPassword && (
             <p className="text-sm ml-2 text-red-600" role="alert">
+              {/* @ts-ignore: Unreachable code error */}
+
               {errors.ConfirmPassword.message}
             </p>
           )}
