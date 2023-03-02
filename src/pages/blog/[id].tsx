@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import Page from '../components/Blog/Page'
+import Navbar from '../../components/Navbar/Navbar'
+import Page from '../../components/Blog/Page'
 import { useRouter } from 'next/router'
-import { GET_ALL_BLOGS } from '../Graphql/Query'
+import { GET_ALL_BLOGS } from '../../Graphql/Query'
 import { useQuery } from '@apollo/client'
-import FullScreenSpinner from '../components/Spinner/FullScreenSpinner'
+import FullScreenSpinner from '../../components/Spinner/FullScreenSpinner'
 
 type Props = {}
 

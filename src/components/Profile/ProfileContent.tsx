@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { changeSideBarState } from '@/pages/Redux/features/SideBarSlice'
+import { changeSideBarState } from '@/Redux/features/SideBarSlice'
 import React, { useEffect } from 'react'
 import { AiFillDelete, AiFillEdit, AiFillHeart } from 'react-icons/ai'
 import { FaRegHeart } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
-import { showDeleteModal } from '@/pages/Redux/features/ModalSlice'
+import { showDeleteModal } from '@/Redux/features/ModalSlice'
 import { useQuery, useMutation } from '@apollo/client'
 import { GET_USER, GET_ALL_BLOGS } from '../../Graphql/Query'
 import { LIKE_BLOG, UNLIKE_BLOG } from '../../Graphql/Mutation'
@@ -68,15 +68,13 @@ const ProfileContent = ({
     })
   }
 
-  console.log(user)
-
   return (
     <div className=" mt-16  h-auto w-full relative overflow-hidden  rounded-2xl">
       <div className="min-w-[40%] bg-white">
         <div className="min-w-full h-[300px]">
           <img
             className="w-[100%] h-[100%] object-cover  rounded-tr-2xl"
-            src={image ? image.url : '/assets/noimage/NoImage.jpg'}
+            src={image?.url ? image.url : '/assets/noimage/NoImage.jpg'}
             alt="Card-Image"
           />
         </div>
@@ -119,7 +117,9 @@ const ProfileContent = ({
               <img
                 className="w-[30px] h-[30px] rounded-full"
                 src={
-                  user.image ? user.image.url : '/assets/noimage/NoImage.jpg'
+                  user.image && user.image.url
+                    ? user.image.url
+                    : '/assets/noimage/noProPic.png'
                 }
                 alt=""
               />

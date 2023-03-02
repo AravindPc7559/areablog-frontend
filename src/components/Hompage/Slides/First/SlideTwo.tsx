@@ -1,5 +1,5 @@
 import React from 'react'
-import UserProfileTag from '@/pages/components/Common/ProfileTag/UserProfileTag'
+import UserProfileTag from '@/components/Common/ProfileTag/UserProfileTag'
 import { GET_USER } from '../../../../Graphql/Query';
 import { useQuery } from '@apollo/client';
 

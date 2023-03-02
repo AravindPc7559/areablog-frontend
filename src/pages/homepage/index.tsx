@@ -2,19 +2,19 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import SlideOne from '../components/Hompage/Slides/First/SlideOne'
-import SlideTwo from '../components/Hompage/Slides/First/SlideTwo'
-import SideBar from '../components/Sidebars/SideBar'
-import Filter from '../components/Hompage/Slides/Third/Filter'
+import Navbar from '../../components/Navbar/Navbar'
+import SlideOne from '../../components/Hompage/Slides/First/SlideOne'
+import SlideTwo from '../../components/Hompage/Slides/First/SlideTwo'
+import SideBar from '../../components/Sidebars/SideBar'
+import Filter from '../../components/Hompage/Slides/Third/Filter'
 import { GetServerSideProps } from 'next'
-import { requireAuthentication } from '../Utils/requireAuthentification'
+import { requireAuthentication } from '../../Utils/requireAuthentification'
 import { useQuery } from '@apollo/client'
-import ProfileContent from '../components/Profile/ProfileContent'
-import Spinner from '../components/Spinner/Spinner'
-import FullScreenSpinner from '../components/Spinner/FullScreenSpinner'
-import { GET_FOLLOWED_USER_DATA } from '../Graphql/Query'
-import BottomBar from '../components/Mobile/BottomBar'
+import ProfileContent from '../../components/Profile/ProfileContent'
+import Spinner from '../../components/Spinner/Spinner'
+import FullScreenSpinner from '../../components/Spinner/FullScreenSpinner'
+import { GET_FOLLOWED_USER_DATA } from '../../Graphql/Query'
+import BottomBar from '../../components/Mobile/BottomBar'
 type Props = {}
 
 const Homepage = (props: Props) => {

@@ -1,15 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Navbar from '@/pages/components/Navbar/Navbar'
+import Navbar from '@/components/Navbar/Navbar'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from '@apollo/client'
-import { ADD_BLOG } from '@/pages/Graphql/Mutation'
+import { ADD_BLOG } from '@/Graphql/Mutation'
 import { toast } from 'react-toastify'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import FullScreenSpinner from '@/pages/components/Spinner/FullScreenSpinner'
-import BottomBar from '../../components/Mobile/BottomBar'
-import { Category } from '../../components/Common/CommonDatas/Data'
+import FullScreenSpinner from '@/components/Spinner/FullScreenSpinner'
+import BottomBar from '../../../components/Mobile/BottomBar'
+import { Category } from '../../../components/Common/CommonDatas/Data'
 
 type Props = {}
 

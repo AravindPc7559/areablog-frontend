@@ -5,7 +5,7 @@ import { BsSearch } from 'react-icons/bs'
 import { TfiWrite } from 'react-icons/tfi'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { changeSideBarState } from '@/pages/Redux/features/SideBarSlice'
+import { changeSideBarState } from '@/Redux/features/SideBarSlice'
 
 type Props = {}
 

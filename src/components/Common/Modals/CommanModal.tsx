@@ -1,4 +1,4 @@
-import { showDeleteModal } from '@/pages/Redux/features/ModalSlice'
+import { showDeleteModal } from '@/Redux/features/ModalSlice'
 import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useMutation } from '@apollo/client'

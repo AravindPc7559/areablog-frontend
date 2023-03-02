@@ -3,10 +3,10 @@ import { useRouter } from 'next/router'
 import React, { useContext, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { HiPencilSquare } from 'react-icons/hi2'
-import { changeSideBarState } from '@/pages/Redux/features/SideBarSlice'
+import { changeSideBarState } from '@/Redux/features/SideBarSlice'
 import { ADD_FOLLOWER, REMOVE_FOLLOWER } from '../../Graphql/Mutation'
 import { useMutation } from '@apollo/client'
-import { GET_USER, GET_ALL_BLOGS } from '@/pages/Graphql/Query'
+import { GET_USER, GET_ALL_BLOGS } from '@/Graphql/Query'
 type Props = {
   userId: string | string[] | undefined
   followingData: any

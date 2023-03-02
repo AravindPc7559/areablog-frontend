@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { useMutation } from '@apollo/client'
-import { ADD_FOLLOWER, REMOVE_FOLLOWER } from '@/pages/Graphql/Mutation'
-import { GET_ALL_BLOGS, GET_USER } from '@/pages/Graphql/Query'
+import { ADD_FOLLOWER, REMOVE_FOLLOWER } from '@/Graphql/Mutation'
+import { GET_ALL_BLOGS, GET_USER } from '@/Graphql/Query'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { changeSideBarState } from '@/pages/Redux/features/SideBarSlice'
+import { changeSideBarState } from '@/Redux/features/SideBarSlice'
 
 type Props = {
   image: string

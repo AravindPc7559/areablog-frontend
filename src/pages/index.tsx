@@ -1,7 +1,7 @@
 import { Inter } from '@next/font/google'
-import Authentication from './components/Auth/Authentication'
+import Authentication from '../components/Auth/Authentication'
 import { GetServerSideProps } from 'next'
-import {requireAuthenticationForAuthPage } from './Utils/requireAuthentification'
+import {requireAuthenticationForAuthPage } from '../Utils/requireAuthentification'
 
 const inter = Inter({ subsets: ['latin'] })
 

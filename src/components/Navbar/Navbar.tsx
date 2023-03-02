@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import { changeSideBarState } from '@/pages/Redux/features/SideBarSlice'
+import { changeSideBarState } from '@/Redux/features/SideBarSlice'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { AiOutlineLogout } from 'react-icons/ai'

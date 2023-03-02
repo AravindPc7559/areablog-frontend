@@ -2,7 +2,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { changeSideBarState } from '@/pages/Redux/features/SideBarSlice'
+import { changeSideBarState } from '@/Redux/features/SideBarSlice'
 
 type Props = {
   image: string
