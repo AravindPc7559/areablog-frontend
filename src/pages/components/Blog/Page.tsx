@@ -6,8 +6,8 @@ type Props = {
   blogName: String
   category: String
   image?: {
-    public_id: String
-    url: String
+    public_id: string
+    url: string
   }
   userId: String
 }
@@ -18,7 +18,7 @@ const Page = ({ blogContent, blogName, category, image }: Props) => {
       <div className="container mx-auto overflow-hidden max-w-full min-h-screen mt-12 py-10">
         <div className="max-auto h-auto py-5 grid mx-auto place-content-center">
           <img
-            src={image.url ? image.url : '/assets/noimage/NoImage.jpg'}
+            src={image ? image.url : '/assets/noimage/NoImage.jpg'}
             alt="Blog-Image"
             className="max-w-[500px] max-h-[500px] object-cover"
           />

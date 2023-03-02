@@ -15,12 +15,12 @@ type Props = {
   blogName: String
   category: String
   image?: {
-    public_id: String
-    url: String
+    public_id: string
+    url: string
   }
   userId: String
   _id: String
-  Liked: String[]
+  Liked: any
 }
 
 const ProfileContent = ({
@@ -76,7 +76,7 @@ const ProfileContent = ({
         <div className="min-w-full h-[300px]">
           <img
             className="w-[100%] h-[100%] object-cover  rounded-tr-2xl"
-            src={image.url !== null ? image.url : '/assets/noimage/NoImage.jpg'}
+            src={image ? image.url : '/assets/noimage/NoImage.jpg'}
             alt="Card-Image"
           />
         </div>
@@ -84,6 +84,7 @@ const ProfileContent = ({
           <div className="flex gap-4">
             <button className="font-semibold flex">
               <p className="mt-2 font-semibold">{Liked.length}</p>
+
               {Liked.includes(localStorage.getItem('UserId')) ? (
                 <AiFillHeart
                   className="mt-1 text-3xl text-red-600 ml-3"

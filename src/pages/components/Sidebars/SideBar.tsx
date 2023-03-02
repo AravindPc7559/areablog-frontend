@@ -23,7 +23,7 @@ type Props = {}
 
 function SideBar({}: Props) {
   let [loading, setLoading] = useState(false)
-  const [image, setImage] = useState('')
+  const [image, setImage] = useState<any>('')
   let UserId: any
   const router = useRouter()
   const dispatch = useDispatch()
@@ -114,6 +114,7 @@ function SideBar({}: Props) {
             />
             {errors.blogName && (
               <p className="text-sm ml-2 text-red-600" role="alert">
+                {/* @ts-ignore: Unreachable code error */}
                 {errors.blogName.message}
               </p>
             )}
@@ -132,6 +133,8 @@ function SideBar({}: Props) {
             </select>
             {errors.category && (
               <p className="text-sm ml-2 text-red-600" role="alert">
+                {/* @ts-ignore: Unreachable code error */}
+
                 {errors.category.message}
               </p>
             )}
@@ -154,6 +157,8 @@ function SideBar({}: Props) {
             />
             {errors.blog && (
               <p className="text-sm ml-2 text-red-600" role="alert">
+                {/* @ts-ignore: Unreachable code error */}
+
                 {errors.blog.message}
               </p>
             )}

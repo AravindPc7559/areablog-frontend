@@ -9,7 +9,7 @@ import { useMutation } from '@apollo/client'
 import { GET_USER, GET_ALL_BLOGS } from '@/pages/Graphql/Query'
 type Props = {
   userId: string | string[] | undefined
-  followingData: string[]
+  followingData: any
 }
 
 const HeadPart = ({ userId, followingData }: Props) => {

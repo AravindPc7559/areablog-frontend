@@ -14,7 +14,7 @@ import { Category } from '../../components/Common/CommonDatas/Data'
 type Props = {}
 
 const CreateBlog = (props: Props) => {
-  const [image, setImage] = useState('')
+  const [image, setImage] = useState<string | ArrayBuffer | null>('')
   const router = useRouter()
   let UserId: string | null
 
@@ -100,6 +100,8 @@ const CreateBlog = (props: Props) => {
                   />
                   {errors.blogName && (
                     <p className="text-sm ml-2 text-red-600" role="alert">
+                      {/* @ts-ignore: Unreachable code error */}
+
                       {errors.blogName.message}
                     </p>
                   )}
@@ -120,6 +122,8 @@ const CreateBlog = (props: Props) => {
                   </select>
                   {errors.category && (
                     <p className="text-sm ml-2 text-red-600" role="alert">
+                      {/* @ts-ignore: Unreachable code error */}
+
                       {errors.category.message}
                     </p>
                   )}
@@ -144,6 +148,8 @@ const CreateBlog = (props: Props) => {
                   />
                   {errors.blog && (
                     <p className="text-sm ml-2 text-red-600" role="alert">
+                      {/* @ts-ignore: Unreachable code error */}
+
                       {errors.blog.message}
                     </p>
                   )}

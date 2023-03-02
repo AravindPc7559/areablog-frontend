@@ -13,7 +13,7 @@ type Props = {
   description: string
   userId: string
   name: string
-  followingData: string[]
+  followingData: any
 }
 
 const UserProfileTag = ({
