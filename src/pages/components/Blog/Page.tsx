@@ -1,96 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
-type Props = {}
+type Props = {
+  blogContent: String
+  blogName: String
+  category: String
+  image?: {
+    public_id: String
+    url: String
+  }
+  userId: String
+}
 
-const Page = (props: Props) => {
-  
+const Page = ({ blogContent, blogName, category, image }: Props) => {
   return (
-    <div className="container mx-auto mt-12 py-10">
-      <div className="w-full h-auto py-5 flex justify-center">
-        <img
-          src="https://rare-gallery.com/uploads/posts/372347-4k-wallpaper.jpg"
-          alt=""
-          className=""
-        />
+    <>
+      <div className="container mx-auto overflow-hidden max-w-full min-h-screen mt-12 py-10">
+        <div className="max-auto h-auto py-5 grid mx-auto place-content-center">
+          <img
+            src={image.url ? image.url : '/assets/noimage/NoImage.jpg'}
+            alt="Blog-Image"
+            className="max-w-[500px] max-h-[500px] object-cover"
+          />
+        </div>
+        <div className="w-full h-auto">
+          <h1 className="text-center text-xl md:text-4xl font-semibold py-4">
+            {blogName}
+          </h1>
+          <div className="break-words leading-10 whitespace-pre-wrap md:px-10">
+            {blogContent}
+          </div>
+        </div>
       </div>
-      <h1 className='text-center text-xl md:text-4xl font-semibold py-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, eum.</h1>
-      <p className="leading-9 text-center md:text-start text-xl text-gray-900">
-        {' '}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        pariatur, quia itaque molestias debitis at quae, magni atque dolores qui
-        vel? Reiciendis cumque dolorem a explicabo quaerat eligendi repudiandae
-        laborum deleniti nostrum quod vero laudantium ex aut, qui nesciunt
-        delectus illum voluptas quas cum corrupti quia accusantium obcaecati
-        officiis eum! Natus illo facere repellendus quaerat sit fuga porro
-        deleniti itaque, at assumenda voluptatem explicabo minima, animi, maxime
-        tempore numquam laborum. Nam quo neque accusamus odio error, eos
-        explicabo exercitationem doloremque cupiditate excepturi itaque ipsum,
-        esse repellendus ratione ullam adipisci voluptatum? Earum veniam
-        corporis ab. Earum accusantium ex alias tempore laboriosam?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        pariatur, quia itaque molestias debitis at quae, magni atque dolores qui
-        vel? Reiciendis cumque dolorem a explicabo quaerat eligendi repudiandae
-        laborum deleniti nostrum quod vero laudantium ex aut, qui nesciunt
-        delectus illum voluptas quas cum corrupti quia accusantium obcaecati
-        officiis eum! Natus illo facere repellendus quaerat sit fuga porro
-        deleniti itaque, at assumenda voluptatem explicabo minima, animi, maxime
-        tempore numquam laborum. Nam quo neque accusamus odio error, eos
-        explicabo exercitationem doloremque cupiditate excepturi itaque ipsum,
-        esse repellendus ratione ullam adipisci voluptatum? Earum veniam
-        corporis ab. Earum accusantium ex alias tempore laboriosam?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        pariatur, quia itaque molestias debitis at quae, magni atque dolores qui
-        vel? Reiciendis cumque dolorem a explicabo quaerat eligendi repudiandae
-        laborum deleniti nostrum quod vero laudantium ex aut, qui nesciunt
-        delectus illum voluptas quas cum corrupti quia accusantium obcaecati
-        officiis eum! Natus illo facere repellendus quaerat sit fuga porro
-        deleniti itaque, at assumenda voluptatem explicabo minima, animi, maxime
-        tempore numquam laborum. Nam quo neque accusamus odio error, eos
-        explicabo exercitationem doloremque cupiditate excepturi itaque ipsum,
-        esse repellendus ratione ullam adipisci voluptatum? Earum veniam
-        corporis ab. Earum accusantium ex alias tempore laboriosam?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        pariatur, quia itaque molestias debitis at quae, magni atque dolores qui
-        vel? Reiciendis cumque dolorem a explicabo quaerat eligendi repudiandae
-        laborum deleniti nostrum quod vero laudantium ex aut, qui nesciunt
-        delectus illum voluptas quas cum corrupti quia accusantium obcaecati
-        officiis eum! Natus illo facere repellendus quaerat sit fuga porro
-        deleniti itaque, at assumenda voluptatem explicabo minima, animi, maxime
-        tempore numquam laborum. Nam quo neque accusamus odio error, eos
-        explicabo exercitationem doloremque cupiditate excepturi itaque ipsum,
-        esse repellendus ratione ullam adipisci voluptatum? Earum veniam
-        corporis ab. Earum accusantium ex alias tempore laboriosam?
-
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        pariatur, quia itaque molestias debitis at quae, magni atque dolores qui
-        vel? Reiciendis cumque dolorem a explicabo quaerat eligendi repudiandae
-        laborum deleniti nostrum quod vero laudantium ex aut, qui nesciunt
-        delectus illum voluptas quas cum corrupti quia accusantium obcaecati
-        officiis eum! Natus illo facere repellendus quaerat sit fuga porro
-        deleniti itaque, at assumenda voluptatem explicabo minima, animi, maxime
-        tempore numquam laborum. Nam quo neque accusamus odio error, eos
-        explicabo exercitationem doloremque cupiditate excepturi itaque ipsum,
-        esse repellendus ratione ullam adipisci voluptatum? Earum veniam
-        corporis ab. Earum accusantium ex alias tempore laboriosam?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        pariatur, quia itaque molestias debitis at quae, magni atque dolores qui
-        vel? Reiciendis cumque dolorem a explicabo quaerat eligendi repudiandae
-        laborum deleniti nostrum quod vero laudantium ex aut, qui nesciunt
-        delectus illum voluptas quas cum corrupti quia accusantium obcaecati
-        officiis eum! Natus illo facere repellendus quaerat sit fuga porro
-        deleniti itaque, at assumenda voluptatem explicabo minima, animi, maxime
-        tempore numquam laborum. Nam quo neque accusamus odio error, eos
-        explicabo exercitationem doloremque cupiditate excepturi itaque ipsum,
-        esse repellendus ratione ullam adipisci voluptatum? Earum veniam
-        corporis ab. Earum accusantium ex alias tempore laboriosam?
-      </p>
-    </div>
+    </>
   )
 }
 

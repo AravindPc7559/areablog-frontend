@@ -1,30 +1,28 @@
 import React, { CSSProperties, useState } from 'react'
 import HashLoader from 'react-spinners/HashLoader'
-type Props = {
-  loading: boolean
-}
+type Props = {}
 
 const override: CSSProperties = {
   display: 'block',
   margin: '0 auto',
   borderColor: 'red',
 }
-
-const Spinner = ({ loading }: Props) => {
-  let [color, setColor] = useState('00008B')
+const FullScreenSpinner = (props: Props) => {
+  let [color, setColor] = useState('#00C6FB')
   return (
-    <div>
-      {' '}
-      <HashLoader
+    <div className='absolute w-full min-h-screen bg-white z-50 opacity-75'>
+     <div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
+     <HashLoader
         color={color}
-        loading={loading}
+        loading={true}
         cssOverride={override}
         size={80}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
+     </div>
     </div>
   )
 }
 
-export default Spinner
+export default FullScreenSpinner

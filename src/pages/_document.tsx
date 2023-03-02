@@ -1,6 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { NextRequest } from 'next/server';
 
-export default function Document() {
+export default function Document(req: NextRequest) {
+
   return (
     <Html lang="en">
       <Head />
