@@ -17,7 +17,7 @@ const CommanModal = (props: Props) => {
   ] = useMutation(DELETE_BLOG)
   const router = useRouter()
 
-  const HandleDelete = useCallback(() => {
+  const HandleDelete = () => {
     if (deleteModal.type === 'profile-delete') {
       DeleteBlog({
         variables: {
@@ -45,7 +45,7 @@ const CommanModal = (props: Props) => {
         }
       })
     }
-  }, [DeleteBlog, deleteModal.id, deleteModal.type])
+  }
 
   const dispatch = useDispatch()
 
