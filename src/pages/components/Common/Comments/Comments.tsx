@@ -12,7 +12,7 @@ type Props = {
   comment: String
   commenterID: String
   blogID: String
-  createdAt: String
+  createdAt: string
   updatedAt: String
 }
 
